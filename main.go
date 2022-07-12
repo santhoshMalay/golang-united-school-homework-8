@@ -50,7 +50,7 @@ func Perform(args Arguments, writer io.Writer) error {
 			return fmt.Errorf("-item flag has to be specified")
 		}
 
-		file, err := os.OpenFile(args["fileName"], os.O_RDWR|os.O_CREATE, filePermission)
+		file, err := os.OpenFile(args["fileName"], os.O_RDWR|os.O_CREATE, filePermission1)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -64,7 +64,7 @@ func Perform(args Arguments, writer io.Writer) error {
 		fmt.Printf("Operation to be performed %s \n", operation)
 
 	case operation == "findById":
-		file, err := os.OpenFile(args["fileName"], os.O_RDWR, filePermission)
+		file, err := os.OpenFile(args["fileName"], os.O_RDWR, filePermission1)
 		if err != nil {
 			return fmt.Errorf("-fileName flag has to be specified")
 		}
