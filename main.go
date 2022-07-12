@@ -11,7 +11,7 @@ import (
 
 type Arguments map[string]string
 
-// const filePermission = 0644
+const filePermission1 = 0644
 
 func Perform(args Arguments, writer io.Writer) error {
 
@@ -30,7 +30,7 @@ func Perform(args Arguments, writer io.Writer) error {
 
 	switch {
 	case operation == "list":
-		file, err := os.OpenFile(args["fileName"], os.O_RDWR, filePermission)
+		file, err := os.OpenFile(args["fileName"], os.O_RDWR, filePermission1)
 		if err != nil {
 			return fmt.Errorf("-fileName flag has to be specified")
 		}
