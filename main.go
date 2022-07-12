@@ -11,7 +11,7 @@ import (
 
 type Arguments map[string]string
 
-const filePermission = 0644
+// const filePermission = 0644
 
 func Perform(args Arguments, writer io.Writer) error {
 
